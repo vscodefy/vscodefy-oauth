@@ -22,13 +22,14 @@ function getSpotifyUrl () {
     const redirectUrl = 'http://localhost:8080';
     const CLIENT_ID = 'afdf5f70fca34efcae1f224b68728aa2';
     const scope = [
-        'user-modify-playback-state',
-        'user-read-private',
-        'user-read-email',
-        'user-read-currently-playing',
-        'streaming'
+      'user-modify-playback-state',
+      'user-read-playback-state',
+      'user-read-private',
+      'user-read-email',
+      'user-read-currently-playing',
+      'streaming'
     ];
-    
+
     const baseURL = 'https://accounts.spotify.com/en/authorize';
     const url = `${baseURL}?client_id=${CLIENT_ID}&response_type=code&redirect_uri=${redirectUrl}`;
     return `${url}&scope=${encodeURIComponent(scope.join(','))}`;
