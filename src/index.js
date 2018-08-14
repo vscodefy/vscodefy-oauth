@@ -19,7 +19,7 @@ window.onload = function () {
 }
 
 function getSpotifyUrl () {
-    const redirectUrl = 'http://localhost:8080';
+    const redirectUrl = window.location.origin;
     const CLIENT_ID = 'afdf5f70fca34efcae1f224b68728aa2';
     const scope = [
       'user-modify-playback-state',
