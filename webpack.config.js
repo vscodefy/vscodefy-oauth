@@ -23,15 +23,6 @@ module.exports = {
       {
         test: /\.s[c|a]ss$/,
         use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
-      },
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {}
-          }
-        ]
       }
     ]
   },
@@ -44,7 +35,8 @@ module.exports = {
       inject: false,
       hash: true,
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      favicon: './src/favicon.ico',
     }),
     new WebpackMd5Hash()
   ],

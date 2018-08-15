@@ -1,5 +1,4 @@
 import './scss/index.scss';
-import img from './assets/icon.png';
 import ClipboardJS from 'clipboard';
 
 window.onload = function () {
