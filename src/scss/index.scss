@@ -1,8 +1,8 @@
+@import 'variables';
 * {
   margin: 0;
   padding: 0;
 }
-
 html,
 body {
   width: 100%;
@@ -20,21 +20,26 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 10px;
-  width: 500px;
-  height: 500px;
   background-color: #fafafa;
-}
-.container span {
-  align-self: center;
-}
-.spotify-code-container{
-  overflow: auto;
-  word-break: break-all;
-  background-color: #f5f5f5;
+  height: 500px;
   width: 500px;
-  height: 100px;
+  margin-top: 50px;
+  section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    span {
+      padding: 2px;
+      align-self: center;
+    }
+    .spotify-code-container{
+      overflow: auto;
+      word-break: break-all;
+      background-color: #f5f5f5;
+      height: 100px;
+    }
+  }
 }
 
 
@@ -52,4 +57,57 @@ button{
 button:hover {
   background-color: #178e41;
   transition: background-color .3s;
+}
+.logo-container {
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-content: center;
+  cursor: pointer;
+  span{
+    font-size: 2rem;
+    padding: 15px;
+  }
+}
+.logo{
+  margin: 20px;
+  height: 128px;
+  width: 128px;
+  min-height: 24px;
+  min-width: 24px;
+  background: url($logo64);
+  background-repeat: no-repeat;
+  display: flex;
+  align-self: center;
+}
+
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0)
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg)
+  }
+  40%,
+  80% {
+    transform: rotate(10deg)
+  }
+}
+
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm {
+    animation: none
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+  }
 }
