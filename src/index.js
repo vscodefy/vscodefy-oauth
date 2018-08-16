@@ -1,4 +1,6 @@
 import './scss/index.scss';
+import 'toastr/toastr.scss';
+import toastr from 'toastr/toastr.js';
 import ClipboardJS from 'clipboard';
 
 window.onload = function () {
@@ -10,6 +12,7 @@ window.onload = function () {
         const clipboard = new ClipboardJS('.clipboard');
         clipboard.on('success',(e) => {
             e.clearSelection();
+            toastr.success('OAuth code copied!','Success',{positionClass:'toast-bottom-right'})
         });
     }
     const spotifyButton = document.getElementById('spotifyButton')

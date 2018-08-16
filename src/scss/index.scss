@@ -1,21 +1,20 @@
 @import 'variables';
-
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Courier New', Courier, monospace
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#1DB954 5%, #0079c8 95%);
+  background: linear-gradient(#1DB954, #0079c8 );
 }
 
 .container {
@@ -24,6 +23,8 @@ body {
   background-color: #fafafa;
   height: 500px;
   width: 500px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 2px;
   margin-top: 50px;
   section{
     display: flex;
@@ -31,14 +32,18 @@ body {
     justify-content: flex-end;
     padding: 10px;
     span {
+      user-select: none;
       padding: 2px;
       align-self: center;
     }
     .spotify-code-container{
       overflow: auto;
+      font-size: .9rem;
       word-break: break-all;
-      background-color: #f5f5f5;
-      height: 100px;
+      background-color: #EEEEEE;
+      padding: 5px;
+      max-height: 180px;
+      border-radius: 2px;
     }
   }
 }
@@ -52,13 +57,15 @@ button{
   border-radius: 2px;
   padding:10px;
   margin: 2px;
+  font-weight: 500;
+  font-size: 0.9rem;
   cursor: pointer;
+  &:hover {
+    background-color: #178e41;
+    transition: background-color .1s;
+  }
 }
 
-button:hover {
-  background-color: #178e41;
-  transition: background-color .3s;
-}
 .logo-container {
   padding: 10px;
   flex-grow: 1;
@@ -66,19 +73,22 @@ button:hover {
   flex-direction: column;
   align-self: center;
   align-content: center;
-  cursor: pointer;
+  user-select: none;
   span{
     font-size: 2rem;
-    padding: 15px;
+    text-transform: uppercase;
+    margin: 10px;
   }
 }
 .logo{
-  margin: 20px;
+  margin: 10px;
   height: 128px;
   width: 128px;
   min-height: 24px;
   min-width: 24px;
   background: url($logo64);
+  background-position: center;
+  user-select: none;
   background-repeat: no-repeat;
   display: flex;
   align-self: center;

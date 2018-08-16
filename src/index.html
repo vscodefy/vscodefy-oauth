@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
@@ -31,8 +32,8 @@
     <section>
       <span>OAUTH Code:</span>
       <code class="spotify-code-container" id="spotify-code"></code>
-      <button id="spotifyButton" type="button">Sign In on Spotify </button>
-      <button class="clipboard" data-clipboard-target="#spotify-code" type="button">Copy Code</button>
+      <button id="spotifyButton" type="button">Login on Spotify</button>
+      <button class="clipboard" data-clipboard-target="#spotify-code" type="button">Copy OAUTH Code</button>
     </section>
   </div>
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>

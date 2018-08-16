@@ -32,6 +32,7 @@
     "webpack-md5-hash": "^0.0.6"
   },
   "dependencies": {
-    "clipboard": "^2.0.1"
+    "clipboard": "^2.0.1",
+    "toastr": "^2.1.4"
   }
 }
